@@ -1,6 +1,18 @@
 # Тестовое задание для стажёра Frontend
 
+## [Приложение](https://maksstv-avito-test-2023.netlify.app/)
+
 Разработать интерфейс для сайта [Free-To-Play Games](https://www.freetogame.com/), состоящий из двух страниц.
+
+# Важно 
+Предоставленное [API](https://www.freetogame.com/api-doc) c прослойкой [RapidAPI](https://rapidapi.com/digiwalls/api/free-to-play-games-database), которое рекомендуют использовать разработчики freetogame, иногда временно падает и не работает из некоторых стран.
+
+- Работает
+  - США
+  - Ирландия
+- Не работает
+  - РФ
+  - Германия
 
 ## Описание
 
