@@ -4,6 +4,12 @@
     justify-content: space-around;
 }
 
+@media (max-width: 600px) {
+    .filters-and-sorting{
+       margin-bottom: 10px;
+    }
+  }
+
 .filter{
     display: flex;
 }
