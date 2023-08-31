@@ -15,11 +15,6 @@ import { useActions } from '../../hooks/useActions.ts';
 import { useGames } from '../../hooks/useGames.ts';
 
 
-
-
-
-
-
 function ListOfGames() {
 
     const [games, setGames] = useState<IGames[]>()

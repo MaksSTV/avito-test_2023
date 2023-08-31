@@ -5,6 +5,18 @@
     padding-top: 20px;
 }
 
+@media (max-width: 600px) {
+  .container{
+    max-width: 80%;
+}
+}
+
+@media (max-width: 500px) {
+  .container{
+    max-width: 95%;
+}
+}
+
 .card{
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +34,6 @@
 }
 
 .swiper {
-    //max-width: 1000px;
     margin-bottom: 20px;
 }
   
