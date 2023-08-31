@@ -38,7 +38,7 @@ function App() {
         const value: obj = JSON.parse(item)
         const differenceTime = timeNow - Number(value.time)
 
-        if (differenceTime >= 10000) {
+        if (differenceTime >= 300000) {
           localStorage.removeItem('game')
         }
       }

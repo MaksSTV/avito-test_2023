@@ -1,27 +1,49 @@
-# React + TypeScript + Vite
+# Тестовое задание для стажёра Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Разработать интерфейс для сайта [Free-To-Play Games](https://www.freetogame.com/), состоящий из двух страниц.
 
-Currently, two official plugins are available:
+## Описание
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Главная страница
+- Показывает игры
+    - Игры можно отфильтровать по платформе и жанру (например, шутер)
+    - Игры можно отсортировать по дате релиза, популярности и тд
+- Каждая игра в списке содержит:
+	- название
+	- дата релиза (в российском формате)
+    - издатель
+    - жанр
+    - картинка
+- По клику на игру происходит переход на страницу игры
+- На загрузку игр показывать индикатор загрузки
+- Если не получилось получить данные, необходимо сообщить пользователю
+### Страница игры
+- Должна содержать (в любом порядке/виде):	
+	- название
+	- дата релиза (в российском формате)
+    - издатель
+    - разработчик
+    - жанр
+    - картинка/постер
+    - карусель скриншотов
+    - системные требования
+- На странице должна быть кнопка для возврата к списку игр
+- На загрузку игры показывать индикатор загрузки
+- Если не получилось получить данные, необходимо сообщить пользователю
 
-## Expanding the ESLint configuration
+## Особенности:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Адаптивный интерфейс
+- Приложение разработано с помощью React 18+ и Redux / Redux Toolkit
+- Использован [Free-To-Play Games API](https://www.freetogame.com/api-doc).
+- Роутинг выполнен с использованием [React Router v6](https://reactrouter.com/en/main)
+- Фреймворк UI [Material UI](https://mui.com/)
+- Пакетный менеджер `npm`
+- Приложение запускается по адресу `localhost:3001` командой `npm start`
+- При переходах по ссылкам страница не перезагружается
+- Если карточка игры была открыта, то она доступна при последующих открытиях (перезагрузках) страницы без дополнительного запроса в течение 5 минут
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Выполненные опциональные задания
+- Использование TypeScript
+- Список игр может содержать тысячи тайтлов
+- При неудачном запросе три попытки повторного запроса

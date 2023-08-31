@@ -59,8 +59,29 @@ function ListOfGames() {
 
         const fetchData = async (genre: string, platform: string, sort: string) => {
             const { newUrl, options } = getUrl(genre, platform, sort)
-            const response = await fetch(newUrl, options);
-            const result = await response.json();
+
+            let response: Response
+            let result: any
+            try {
+                response = await fetch(newUrl, options);
+                result = await response.json();
+            }
+            catch (e) {
+                try {
+                    response = await fetch(newUrl, options);
+                    result = await response.json();
+                }
+                catch (e) {
+                    try {
+                        response = await fetch(newUrl, options);
+                        result = await response.json();
+                    }
+                    catch(e){
+                        
+                    }
+                }
+            }
+
 
             if (!(gamesOptions.all.allGenre == genre && gamesOptions.all.allPlatform == platform && gamesOptions.all.allSort == sort)) {
                 setPage(1)
