@@ -33,6 +33,7 @@ function ListOfGames() {
 
 
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+        event.preventDefault()
         setPage(value);
         window.scrollTo(0, 100);
     };
@@ -77,7 +78,7 @@ function ListOfGames() {
                         result = await response.json();
                     }
                     catch(e){
-                        
+
                     }
                 }
             }
