@@ -50,6 +50,7 @@
 - Использован [Free-To-Play Games API](https://www.freetogame.com/api-doc).
 - Роутинг выполнен с использованием [React Router v6](https://reactrouter.com/en/main)
 - Фреймворк UI [Material UI](https://mui.com/)
+- [Swiper](https://swiperjs.com/)
 - Пакетный менеджер `npm`
 - Приложение запускается по адресу `localhost:3001` командой `npm start`
 - При переходах по ссылкам страница не перезагружается
